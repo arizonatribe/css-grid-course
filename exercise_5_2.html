@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+        <title>Exercise 5.2</title>
+        <style>
+            body {
+                background-color: plum;
+                font-family: Roboto, Helvetica;
+                font-weight: 700;
+                color: lightslategray;
+            }
+            .grid {
+                min-height: 100vh;
+                display: grid;
+                grid: repeat(3, 300px) / repeat(4, 1fr);
+                grid-gap: 10px;
+            }
+            .subgrid {
+                display: grid;
+                grid-gap: 5px;
+            }
+            .sub {
+                background-color: pink;
+            }
+            .item, .subgrid, .sub {
+                padding: 10px;
+            }
+            .item, .subgrid {
+                opacity: 0.8;
+                background-color: peachpuff;
+            }
+            .hsplit {
+                grid-auto-flow: row;
+            }
+            .vsplit {
+                grid-auto-flow: column;
+            }
+            .grid > div:nth-child(2),
+            .grid > div:nth-child(3),
+            .grid > div:nth-child(9),
+            .grid > div:nth-child(12) {
+                grid: repeat(2, 1fr) / repeat(2, 1fr);
+            }
+        </style>
+    </head>
+    <body>
+        <div class="grid">
+            <div class="item">Item 1</div>
+            <div class="subgrid">
+                <div class="sub">Sub 1</div>
+                <div class="sub">Sub 2</div>
+                <div class="sub">Sub 3</div>
+                <div class="sub">Sub 4</div>
+            </div>
+            <div class="subgrid">
+                <div class="sub">Sub 1</div>
+                <div class="sub">Sub 2</div>
+                <div class="sub">Sub 3</div>
+                <div class="sub">Sub 4</div>
+            </div>
+            <div class="item">Item 4</div>
+            <div class="item">Item 5</div>
+            <div class="subgrid hsplit">
+                <div class="sub">Sub 1</div>
+                <div class="sub">Sub 2</div>
+            </div>
+            <div class="subgrid vsplit">
+                <div class="sub">Sub 1</div>
+                <div class="sub">Sub 2</div>
+            </div>
+            <div class="item">Item 8</div>
+            <div class="subgrid">
+                <div class="sub">Sub 1</div>
+                <div class="sub">Sub 2</div>
+                <div class="sub">Sub 3</div>
+                <div class="sub">Sub 4</div>
+            </div>
+            <div class="item">Item 10</div>
+            <div class="item">Item 11</div>
+            <div class="subgrid">
+                <div class="sub">Sub 1</div>
+                <div class="sub">Sub 2</div>
+                <div class="sub">Sub 3</div>
+                <div class="sub">Sub 4</div>
+            </div>
+        </div>
+    </body>
+</html>
