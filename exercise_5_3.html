@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+        <title>Exercise 5.3</title>
+        <style>
+            body {
+                background-color: snow;
+                font-family: Roboto, Helvetica;
+                font-weight: 700;
+            }
+            .grid {
+                min-height: 100vh;
+                display: grid;
+                grid: auto / repeat(2, 1fr);
+                grid-gap: 10px;
+                overflow: hidden;
+            }
+            .photo {
+                position: relative;
+                display: grid;
+            }
+            .photo span {
+                opacity: 0.5;
+                color: white;
+                padding: 5px 10px;
+                background-color: darkslategrey;
+                display: block;
+                position: absolute;
+                align-content: start;
+                justify-content: start;
+            }
+            .photo img {
+                display: block;
+                width: 100%;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="grid">
+            <div class="photo">
+                <span>Available</span>
+                <img src="images/pittsburgh.jpg" />
+            </div>
+            <div class="photo">
+                <span>Sold</span>
+                <img src="images/diamond_back.jpg" />
+            </div>
+            <div class="photo">
+                <span>Sold</span>
+                <img src="images/facepaint.jpg" />
+            </div>
+            <div class="photo">
+                <span>Available</span>
+                <img src="images/tombstone_doorway.jpg" />
+            </div>
+        </div>
+    </body>
+</html>
